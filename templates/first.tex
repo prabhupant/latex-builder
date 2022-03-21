@@ -1,0 +1,175 @@
+% Author - Prabhu Pant prabhupant.github.io
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[pdftex]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{catchfile}
+\usepackage{pgf}
+\newcommand{\PlaceHolder}[1]{\pgfkeysvalueof{/placeholder/p#1}}
+\CatchFileEdef{\PlaceHolderKeys}{placeholders.txt}{}
+\edef\tmp{\noexpand\pgfkeys{/placeholder/.cd,p1/.initial={},p2/.initial={},p3/.initial={},p4/.initial={},%
+\PlaceHolderKeys}}\tmp
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.375in}
+\addtolength{\evensidemargin}{-0.375in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{#2 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\Large \PlaceHolder{1}} & Email : {\PlaceHolder{2}}\\
+  {\PlaceHolder{3}} & Mobile : \PlaceHolder{4} \\
+\end{tabular*}
+
+
+%-----------EXPERIENCE-----------------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {\PlaceHolder{5}}{\PlaceHolder{6}}
+      {\PlaceHolder{7}}{\PlaceHolder{8} - \PlaceHolder{9}}
+      \resumeItemListStart
+          
+        \resumeItem{}
+            {\PlaceHolder{10}}
+        \resumeItem{}
+            {\PlaceHolder{11}}
+        \resumeItem{}
+            {\PlaceHolder{12}}
+        \resumeItem{}
+            {\PlaceHolder{13}}
+            
+      \resumeItemListEnd
+    
+    \resumeSubheading
+      {\PlaceHolder{14}}{\PlaceHolder{15}}
+      {\PlaceHolder{16}}{\PlaceHolder{17} - \PlaceHolder{18}}
+      \resumeItemListStart
+        \resumeItem{}
+          {\PlaceHolder{19}}
+        \resumeItem{}
+          {\PlaceHolder{20}}
+        \resumeItem{}
+          {\PlaceHolder{21}}
+      \resumeItemListEnd
+      
+    \resumeSubheading
+      {\PlaceHolder{22}}{\PlaceHolder{23}}
+      {\PlaceHolder{24}}{\PlaceHolder{25} - \PlaceHolder{26}}
+      \resumeItemListStart
+        \resumeItem{}
+          {\PlaceHolder{27}}
+        \resumeItem{}
+          {\PlaceHolder{28}}
+        \resumeItem{}
+          {\PlaceHolder{29}}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {\PlaceHolder{30}}
+      {Natural Language Processing Intern}{June 2018 - Aug 2018}
+      \resumeItemListStart
+        \resumeItem{}
+          {Developed an NLP application using Python, NLTK and RASA stack for IoT devices to parse queries and enable information exchange in a network of connected devices.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+  
+%-----------EDUCATION-----------------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {College of Technology, Pantnagar}{Pantnagar, India}
+      {Bachelor of Technology in Information Technology;  GPA: 7.46/10.0}{Aug. 2015 -- June. 2019}
+  \resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------------
+
+\section{Side Projects}
+  \resumeSubHeadingListStart
+    \resumeSubItem{IndiaTracker: }
+      {Volunteered for Karnataka's State Government during the onset of Covid-19 pandemic. Created a web-app to mark covid-hotspots on Bengaluru's map based on anonymised Aarogya Setu's chats and exposed REST APIs to locate the ward, zone and coordinates of suspected cases. Tech: Flask, DigitalOcean, GeoPandas, Dash}
+      \resumeSubItem{RATI App: }
+      {Helped in the development of backend of Rapid Antigen Testing App used by BBMP. Responsible for geocoding and location APIs and data engineering. Tech: Django, GeoPandas, MongoDB}
+    \resumeSubItem{python-ds: }
+      {Created a GitHub repository with 1500+ stars and 500+ forks for data structure and algorithm interview questions on Python. Became a trending repository in the month of October, 2019}
+  \resumeSubHeadingListEnd
+
+
+%--------PROGRAMMING SKILLS------------
+\section{Programming Skills}
+ \resumeSubHeadingListStart
+   \item{
+     \textbf{Languages}{: Python, Java, Bash, Golang}
+    %  \hfill
+    %  \textbf{Frameworks/Tools}{: Django, Spring, Flask, AWS, Pandas, Numpy}
+   }
+   \item{
+     \textbf{Frameworks/Tools}{: Django, Spring Boot, Flask, AWS, Pandas, Numpy}
+    %  \hfill
+    %  \textbf{Frameworks/Tools}{: }
+   }
+ \resumeSubHeadingListEnd
+ 
+%-------------------------------------------
+\end{document}
+

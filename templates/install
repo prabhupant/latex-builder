@@ -1,0 +1,10 @@
+sudo su
+brew install 
+brew install --cask basictex
+tlmgr update --self
+sudo tlmgr install preprint
+sudo tlmgr install titlesec
+sudo tlmgr install marvosym
+sudo tlmgr install enumitem
+sudo tlmgr install catchfile
+
